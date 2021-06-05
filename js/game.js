@@ -27,6 +27,9 @@ snake[0] = {
 
 };
 
+const hrum = new Audio();
+hrum.src = "snd/hrum.wav";
+
 document.addEventListener("keydown", direction);
 
 let dir;
@@ -71,6 +74,7 @@ function drawGame() {
 
   if (snakeX == carrot.x && snakeY == carrot.y) {
 
+    hrum.play();
     score++;
     carrot = {
 
